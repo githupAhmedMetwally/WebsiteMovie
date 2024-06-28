@@ -1,0 +1,44 @@
+﻿ @model Movie
+
+
+
+
+
+<span class="card-text" style="background-color:royalblue;padding:4px;color:whitesmoke;border-radius:3px">  @Model.MovieStatus</span>
+<br />
+
+        <div class="card mb-3 " style="min-width: 540px; margin-right:15px;margin-top:7px">
+            <div style="color:black;padding:8px; background-color:darkgray"> <h5 class="card-title">@Model.Name</h5></div>
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="~/images/@Model.ImgUrl" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                <p class="card-text">Description: <strong style="color:#444;padding:4px">@Model.Description</strong></p>
+
+                <p class="card-text">Price: <strong style="background-color:#222;color:whitesmoke;padding:4px">@Model.Price</strong></p>
+                <p class="card-text">Cinema: @Model.Cinema.Name</p>
+                <p class="card-text">Start Date: @Model.StartDate</p>
+                <p class="card-text">End Date: @Model.EndDate</p>
+                <p class="card-text">Category: @Model.Category.Name</p>
+                
+                <video controls>
+                    <source src="@Model.TrailerUrl" /> 
+                </video>
+                 <br />
+                 <br />
+                        <div>
+                             <a class="btn btn-success" href="#" style="border-radius:2px" role="button">Book Ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ 
+
+
+
